@@ -60,6 +60,15 @@ twindb\_backup.destination.ssh module
    :undoc-members:
    :show-inheritance:
 
+twindb\_backup.destination.azblob module
+------------------------------------
+
+.. automodule:: twindb_backup.destination.azblob
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
 Module contents
 ---------------
 

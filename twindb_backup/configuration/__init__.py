@@ -8,6 +8,7 @@ from shlex import split
 
 from twindb_backup import INTERVALS, LOG
 from twindb_backup.configuration.compression import CompressionConfig
+from twindb_backup.configuration.destinations.azblob import AzBlobConfig
 from twindb_backup.configuration.destinations.gcs import GCSConfig
 from twindb_backup.configuration.destinations.s3 import S3Config
 from twindb_backup.configuration.destinations.ssh import SSHConfig
@@ -16,6 +17,7 @@ from twindb_backup.configuration.gpg import GPGConfig
 from twindb_backup.configuration.mysql import MySQLConfig
 from twindb_backup.configuration.retention import RetentionPolicy
 from twindb_backup.configuration.run_intervals import RunIntervals
+from twindb_backup.destination.azblob import AzureBlob
 from twindb_backup.destination.gcs import GCS
 from twindb_backup.destination.s3 import S3
 from twindb_backup.destination.ssh import Ssh
@@ -111,6 +113,15 @@ class TwinDBBackupConfig:
         """Google Cloud Storage configuration"""
         try:
             return GCSConfig(**self.__read_options_from_section("gcs"))
+
+        except NoSectionError:
+            return None
+
+    @property
+    def azblob(self):  # pylint: disable=invalid-name
+        """Azure Cloud Blob Storage Container configuration"""
+        try:
+            return AzBlobConfig(**self.__read_options_from_section("azblob"))
 
         except NoSectionError:
             return None
@@ -240,6 +251,12 @@ class TwinDBBackupConfig:
                     gc_credentials_file=self.gcs.gc_credentials_file,
                     gc_encryption_key=self.gcs.gc_encryption_key,
                     hostname=backup_source,
+                )
+            elif backup_destination == "azure":
+                return AzureBlob(
+                    connection_string=self.azblob.connection_string,
+                    remote_path=self.azblob.remote_path,
+                    can_do_overwrites=self.azblob.can_do_overwrites,
                 )
 
             else:

@@ -14,7 +14,7 @@
  The destination class inherits from BaseDestination(). This is where you
  store backups. The destination class must define save() method that
  takes an input stream and saves it somewhere. Examples of
- the destination class are S3(), Ssh().
+ the destination class are S3(), GCS(), AzureBlob(), Ssh().
 
  There are modifier classes. The modifier class sits in the middle between
  the source and the destination and does something with a stream before

@@ -36,7 +36,7 @@ class CustomLocalEnvTestCase(unittest.TestCase):
             "fname",
         )
         expected_test_complete_remote_path_template = (
-            "{protocol}://{host_name}/{container_name}/{interval}/{media_type}/{fname_prefix}{fname}"
+            "{protocol}://{host}/{container}/{interval}/{media_type}/{fname_prefix}{fname}"
         )
         env_vars = [
             ("test_intervals".upper(), ";", sequence_equality),

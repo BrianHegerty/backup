@@ -20,6 +20,14 @@ twindb\_backup.configuration.destinations.s3 module
    :undoc-members:
    :show-inheritance:
 
+twindb\_backup.configuration.destinations.azblob module
+---------------------------------------------------
+
+.. automodule:: twindb_backup.configuration.destinations.azblob
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 twindb\_backup.configuration.destinations.ssh module
 ----------------------------------------------------
 

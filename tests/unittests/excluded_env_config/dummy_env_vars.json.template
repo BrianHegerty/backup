@@ -8,7 +8,7 @@
             "PRIMARY_TEST_CONN_STR": "DefaultEndpointsProtocol=https;AccountName=from_the_town_of_bedrock;AccountKey=hAVE+4+Ya8Ado/time+a+DAb4do/TIME+a+/Y4b4/d484/d0+tIMe==;EndpointSuffix=flintstones.meet.the.flintstones.net",
             "INTERVALS": ["hourly","daily","weekly","monthly","yearly"],
             "PATH_PARTS":["protocol","host","container","interval","media_type","fname_prefix","fname"],
-            "COMPLETE_REMOTE_PATH_TEMPLATE": "{protocol}://{host_name}/{container_name}/{interval}/{media_type}/{fname_prefix}{fname}"
+            "COMPLETE_REMOTE_PATH_TEMPLATE": "{protocol}://{host}/{container}/{interval}/{media_type}/{fname_prefix}{fname}"
         }
     },
     "dummy_vals": {

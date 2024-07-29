@@ -101,6 +101,18 @@ In the ``[gcs]`` section you specify Google credentials as well as cloud storage
     GC_CREDENTIALS_FILE = XXXXX
     BUCKET = twindb-backups
 
+Azure Blob
+~~~~~~~~~~
+
+In the ``[azblob]`` section you specify Azure credentials as well as where to store backups.
+.. code-block:: ini
+
+    [azblob]
+
+    AZURE_REMOTE_PATH="[protocol]://[host_name]/[container_name]/[interval]/[media_type]/[default_prefix]/[optional_fname]"
+    AZURE_CONNECTION_STRING="azure_secret_connection_string"
+    AZURE_CAN_DO_OVERWRITES=false
+
 SSH Settings
 ~~~~~~~~~~~~
 

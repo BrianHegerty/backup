@@ -33,6 +33,11 @@ GC_CREDENTIALS_FILE="XXXXX"
 GC_ENCRYPTION_KEY=
 BUCKET="twindb-backups"
 
+[azblob]
+AZURE_REMOTE_PATH="[protocol]://[host_name]/[container_name]/[interval]/[media_type]/[default_prefix]/[optional_fname]"
+AZURE_CONNECTION_STRING="azure_secret_connection_string"
+AZURE_CAN_DO_OVERWRITES=false
+
 [mysql]
 mysql_defaults_file=/etc/twindb/my.cnf
 expire_log_days = 8
