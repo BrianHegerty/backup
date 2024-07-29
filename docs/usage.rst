@@ -105,6 +105,7 @@ Azure Blob
 ~~~~~~~~~~
 
 In the ``[azblob]`` section you specify Azure credentials as well as where to store backups.
+
 .. code-block:: ini
 
     [azblob]
