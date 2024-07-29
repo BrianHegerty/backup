@@ -25,7 +25,7 @@ TwinDB Backup
     :alt: Updates
 
 TwinDB Backup is a multipurpose tool for backing up MySQL database and regular files/directories on the file system.
-It can store backup copies on a remote SSH server, Amazon S3 or
+It can store backup copies on a remote SSH server, Amazon S3, Azure Blob, or
 Google Cloud Storage.
 
 TwinDB Backup accepts a backup copy stream from any of supported sources
@@ -54,6 +54,7 @@ backup destination. It can be:
 
 - Amazon S3 bucket
 - Google Cloud Storage bucket
+- Azure Cloud Blob Storage Container
 - Any server with SSH demon
 
 .. figure:: https://user-images.githubusercontent.com/1763754/56677794-20901b80-6676-11e9-8f71-8de0b0b6f066.png
@@ -93,6 +94,7 @@ Features
 
 - Amazon S3
 - Google Cloud Storage
+- Azure Cloud Blob Storage Container
 - Remote SSH server
 - Optional local copy
 
